@@ -1,4 +1,7 @@
-# config.py
+# Author: Ara, Lena
+# Description: Configuration file for the multimodal classifier project.
+# All hyperparameters, file paths, and feature names are stored here.
+
 MODEL_NAME = "dmis-lab/biobert-v1.1"
 TRAIN_DATA = "patients_data_train.csv"
 TEST_DATA = "patients_data_test.csv"
@@ -9,8 +12,9 @@ EPOCHS = 10
 LEARNING_RATE = 5e-5
 
 # This is crucial for fixing your brittle preprocessing
-TABULAR_FEATURES = [
-            'Patient_age', 'patient_gender', 'patient_race', 'patient_ethnicity','0_Congestive Heart Failure',
+TABULAR_FEATURES_1 = [
+            'Patient_age', 'patient_gender', 'patient_race', 'patient_ethnicity','confusin_flag','SID']
+TABULAR_FEATURES_2 = ['0_Congestive Heart Failure',
            '1_Cardiac Arrhythmias', '2_Valvular Disease',
            '3_Pulmonary Circulation Disorders', '4_Peripheral Vascular Disorders',
            '5_Hypertension, Uncomplicated', '6_Hypertension, Complicated',
